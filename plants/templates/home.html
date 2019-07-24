@@ -8,9 +8,9 @@
 			<h2 class="greeting_text"> Hello {{user.get_short_name}}!</h2>
 			<h1 class="welcome_text"> Welcome to Miracle Workers Housing Search </h1>	
 		</div>
-		<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
-		</div>
+		
+		<a class="button" href="{% url 'logout' %}">Log Out</a>
+		
 
 
 	{% else %}
