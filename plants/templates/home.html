@@ -6,10 +6,11 @@
 	{% if user and not user.is_anonymous %}
 		<div class="greeting_div">
 			<h2 class="greeting_text"> Hello {{user.get_short_name}}!</h2>
-			<h1 class="welcome_text"> Welcome to Miracle Workers Housing Search </h1>	
+			<h1 class="welcome_text"> Welcome to Miracle Workers Housing Search </h1>
+			<a class="btn-primary" href="{% url 'logout' %}">Log Out</a>
 		</div>
 		
-		<a class="button" href="{% url 'logout' %}">Log Out</a>
+		
 		
 
 
