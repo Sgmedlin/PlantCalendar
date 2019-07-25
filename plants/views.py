@@ -28,7 +28,7 @@ def create_event(request):
   service = build('calendar', 'v3', credentials=creds)
 
   event = service.events().insert(calendarId='primary', body=event).execute()
-  print('Event created: %s' % (event.get('htmlLink'))
+  print('Event created: %s' % (event.get('htmlLink')))
 
   return render(request, 'home.html')
 
