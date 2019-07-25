@@ -9,14 +9,12 @@
 			<h1 class="welcome_text"> Welcome to Miracle Workers Housing Search </h1>
 			<a class="btn-primary" href="{% url 'logout' %}">Log Out</a>
 		</div>
-		
-		
-		
 
 
 	{% else %}
 		<div class="greeting_div">
-			<h1 class="welcome_text"> Welcome to Miracle Workers Housing Search </h1>
+			<h1 class="welcome_text"> Welcome to Plant Calendar </h1>
+			<a class="btn-primary" href="{% url 'login' %}">Log in</a>
 		</div>
 
 	{% endif %}
