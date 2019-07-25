@@ -1,7 +1,7 @@
+from __future__ import print_function
 from django.shortcuts import render
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
-from __future__ import print_function
 import datetime
 import pickle
 import os.path
