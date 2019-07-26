@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="417009e2-0707-4b9c-8a40-679a7f1132b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PlantCalendar/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlantCalendar/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlantCalendar/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlantCalendar/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/plants/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/plants/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/plants/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plants/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/plants/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +12,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plants/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1722">
+            <state relative-caret-position="-1902">
               <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="82" selection-end-column="55" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -88,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -125,8 +120,8 @@
       <find>transplant_fall_begin</find>
       <find>transplant_fall_end</find>
       <find>calendarId</find>
-      <find>transplant</find>
       <find>apartm</find>
+      <find>transplant</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/plants/models.py" />
         <option value="$PROJECT_DIR$/PlantCalendar/urls.py" />
         <option value="$PROJECT_DIR$/PlantCalendar/settings.py" />
@@ -143,6 +137,7 @@
         <option value="$PROJECT_DIR$/plants/templates/base.html" />
         <option value="$PROJECT_DIR$/plants/templates/login.html" />
         <option value="$PROJECT_DIR$/plants/templates/home.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -252,13 +247,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plants/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -317,11 +305,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plants/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1722">
+        <state relative-caret-position="-1902">
           <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="82" selection-end-column="55" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
         </state>
       </provider>
     </entry>
