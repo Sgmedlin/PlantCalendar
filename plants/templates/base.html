@@ -1,10 +1,13 @@
 <!doctype html>
 
+{% load static %}
+
 <html>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<head>
 
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
@@ -14,8 +17,53 @@
 
 
 	</head>
-
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+			padding-top: 28px;
+		}
+	</style>
 	<body>
+
+		{% url 'home' as home_path %}
+		{% url 'login' as login_path %}
+		{% url 'logout' as logout_path %}
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffffff;">
+			<a class="navbar-brand" href="{% url 'home' %}">
+    			<img src="{% static "images/plant.png" %}" width="30" height="30" alt="">
+				plant calendar
+  			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    	<ul class="navbar-nav mr-auto">
+		    	</ul>
+
+		    	<ul class="navbar-nav navbar-right">
+				{% if user and not user.is_anonymous %}
+					<li class="nav-item">
+        				<a class="nav-link" href="{% url 'logout' %}">log out</a>
+      				</li>
+				{% else %}
+					{% if login_path != request.path %}
+						<li class="nav-item">
+        					<a class="nav-link" href="{% url 'login' %}">log in</a>
+      					</li>
+					{% endif %}
+				{% endif %}
+
+		    	</ul>
+
+
+		  	</div>
+
+
+
+		</nav>
 
 		{% block content %}
 		{% endblock content %}

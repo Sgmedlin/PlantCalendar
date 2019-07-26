@@ -100,6 +100,9 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='707152407027-q9il461gq36br03qb6t0itp2umub3beo.apps.googleusercontent.com'  
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'lTWw6NE1EN-Vq1h_8gTxjNN4'
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/calendar',
+]
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',
@@ -130,7 +133,7 @@ DATABASES = {
            # 'ENGINE': 'django.db.backends.sqlite3',
             # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'apartment_database',
+        'NAME': 'plant_database',
         'USER': 'plant_calendar',
         'PASSWORD': 'plantcalendar',
         'HOST': 'localhost',
@@ -140,6 +143,11 @@ DATABASES = {
 
 DATABASES['default'] = dj_database_url.config(default='postgres://vdryiozogfdoho:532dc2827a345b41264a121efdc1b5d9b095d5cf7279262f3c707817df397448@ec2-107-20-185-16.compute-1.amazonaws.com:5432/d160c5i8uojfrv')
 
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # DATABASES = {
 #     'default': {

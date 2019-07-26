@@ -7,10 +7,13 @@
 		<div class= "login_content_container">
 			
 			<div class="login_text_div">
-				<h1 class="login_text"> Please log in using your Google Account </h1>
+				<h1 class="login_text" style="text-align:center"> Please log in using your Google Account </h1>
 			</div>
 
-			<a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-default" id="google_login_button">Google Log In</a>
+			<a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-default" style="display: block;margin-left: auto;
+			margin-right: auto;width: 15vw;">
+				Google Log In
+			</a>
 
 		</div>
   

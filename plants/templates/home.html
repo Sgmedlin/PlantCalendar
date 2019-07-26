@@ -2,15 +2,80 @@
 
 	{% block content %}
 
-	<p> Hello World</p>
 	{% if user and not user.is_anonymous %}
+		<div>
+			<h1 style="text-align:center">
+				plant calendar
+			</h1>
+
+		</div>
 		<div class="greeting_div">
-			<h2 class="greeting_text"> Hello {{user.get_short_name}}!</h2>
-			<h1 class="welcome_text"> Welcome to Plant Calendar </h1>
-			<a class="btn-primary" href="{% url 'logout' %}">Log Out</a>
-			<a class="btn-primary" href="{% url 'create_event' %}">Create Event</a>
+			<h4 class="greeting_text" style="text-align:center"> welcome {{user.get_short_name|lower}} :)</h4>
 		</div>
 
+		<form action="{% url 'filter' %}" name="filtering" style="display: block;margin-left: auto;
+			margin-right: auto;width: 45vw;">
+			<div class="input-group mb-3">
+				<select name="plant_type" class="custom-select">
+				{% if plant_type %}
+					{% if plant_type != "All" %}
+						<option value="{{ plant_type }}" selected> {{ plant_type }} </option>
+					{% endif %}
+				{% endif %}
+					<option value="All">All</option>
+					<option value="Vegetables">Vegetables</option>
+					<option value="Fruit">Fruits</option>
+					<option value="Herbs">Herbs</option>
+					<option value="Perennials">Perennials</option>
+					<option value="Annuals">Annuals</option>
+				</select>
+				<div class="input-group-append">
+					<input type="submit" name="filtering" class="btn btn-primary">
+                </div>
+			</div>
+
+
+		</form>
+
+		<form action="{% url 'home' %}" id="search_bar_plants" method="get" style="display: block;margin-left: auto;
+			margin-right: auto;width: 45vw;">
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" name="search" placeholder="Search" id="search_bar_id_plants">
+				<div class="input-group-append">
+					<input type="submit" class="btn btn-primary" id="search_button_plants" value="Search">
+                </div>
+            </div>
+        </form>
+
+		<form action="{% url 'create_event' %}" method="post" style="display: block;margin-left: auto;
+			margin-right: auto;width: 20vw;">
+			<div style="overflow-y: auto; height: 50vh">
+
+				{% for plant in plants %}
+
+					{% if plant.name in list_of_plants %}
+
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" name="checked_plant"
+								   value="{{ plant.name }}" id="{{ plant.name }}" checked="checked">
+							<label class="form-check-label" for="{{ plant.name }}">{{ plant.name }}</label>
+						</div>
+
+					{% else %}
+
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" name="checked_plant"
+								   value="{{ plant.name }}" id="{{ plant.name }}">
+							<label class="form-check-label" for="{{ plant.name }}">{{ plant.name }}</label>
+						</div>
+
+					{% endif %}
+
+				{% endfor %}
+			</div>
+			{% csrf_token %}
+			<button type="submit" class="btn btn-primary">Create Events</button>
+		</form>
 
 	{% else %}
 		<div class="greeting_div">
